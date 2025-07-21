@@ -6,19 +6,19 @@
     <title>My Cookie Clicker</title>
 </head>
 <body>
-    <h1>Cookie Clicker App</h1>
-
-    <button id="clickButton">Click Me!</button>
-
-    <p>Clicks: <span id="counterDisplay">0</span></p>
-
-    <p id="messageDisplay">Start clicking the button!</p>
+    <h1>My Bratz Doll Cat Clicker!</h1> 
+<button id="clickButton">💋</button> 
+<p>Paws Clicks: <span id="counterDisplay">0</span></p> 
+<p id="messageDisplay">Click the button to pet the cat!</p>
 <script>
 // Goal: Select the button, message display, and counter
         // using document.getElementById()
         const clickButton = document.getElementById("clickButton");
         const counterDisplay = document.getElementById("counterDisplay");
         const messageDisplay = document.getElementById("messageDisplay");
+
+    //Creating background color
+    const bodyElement = document.body; // Needed to change background color
 
         // Goal: Creates a variable to keep track of how many times the button has been clicked
         let clickCount = 0;
@@ -36,13 +36,26 @@
             // 3. If or else if statements to show a new message at specific milestones
             if (clickCount === 10) {
                 messageDisplay.textContent = "You're just getting started!";
+                // Jade: Peach
+            bodyElement.style.backgroundColor = "#E7A486";
+                
             } else if (clickCount === 25) {
                 messageDisplay.textContent = "Wow, that's a lot of clicks!";
+                // Cloe: Blue
+            bodyElement.style.backgroundColor = "#41ACBF";
+                
             } else if (clickCount === 50) {
                 messageDisplay.textContent = "Are you still clicking?";
+                // Yazmin: Purple
+            bodyElement.style.backgroundColor = "#964F8C";
+                
             } else if (clickCount === 100) {
                 messageDisplay.textContent = "You win! Maybe take a break.";
-            }
+                // Sasha: Orange
+                 bodyElement.style.backgroundColor = "#C86B5A";
+            clickButton.textContent = "💄💅"; //  End button
+        }
+            
         });
 </script>
 </body>
