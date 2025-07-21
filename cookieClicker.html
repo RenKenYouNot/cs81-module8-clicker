@@ -20,8 +20,30 @@
         const counterDisplay = document.getElementById("counterDisplay");
         const messageDisplay = document.getElementById("messageDisplay");
 
-        // Goal: Create a variable to keep track of how many times the button has been clicked
+        // Goal: Creates a variable to keep track of how many times the button has been clicked
         let clickCount = 0;
+    // Goal: addEventListener("click", function...) runs code when the button is clicked
+        clickButton.addEventListener("click", function() {
+            // Inside the function:
+
+            // 1. Increase counter variable
+            clickCount++;
+
+            // 2. Updates the counter display on the page
+            //    .textContent to change the visible text inside the HTML element
+            counterDisplay.textContent = clickCount;
+
+            // 3. If or else if statements to show a new message at specific milestones
+            if (clickCount === 10) {
+                messageDisplay.textContent = "You're just getting started!";
+            } else if (clickCount === 25) {
+                messageDisplay.textContent = "Wow, that's a lot of clicks!";
+            } else if (clickCount === 50) {
+                messageDisplay.textContent = "Are you still clicking?";
+            } else if (clickCount === 100) {
+                messageDisplay.textContent = "You win! Maybe take a break.";
+            }
+        });
 </script>
 </body>
 </html>
